@@ -129,8 +129,14 @@ body {
     width: auto;
   }
 
+  .description {
+    text-align: left;
+  }
+
   .role {
     flex-direction: row;
     justify-content: flex-start;
+    font-size: 1.5rem;
+    margin-top: 4rem;
   }
 }
