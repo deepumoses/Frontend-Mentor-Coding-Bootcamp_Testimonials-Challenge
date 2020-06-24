@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+  --text-blue: hsl(240, 8%, 57%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #000;
+  min-height: 100vh;
+}
+
+.section {
+  padding: 3rem 16px;
+  min-height: 100vh;
+  background-image: url("./images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 50% 10vh;
+}
+
+.image-container {
+  padding: 3rem;
+  background-image: url("./images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.image {
+  background-position: center;
+  position: relative;
+}
+
+.image .image-bg {
+  position: absolute;
+  z-index: -10;
+  top: -30px;
+  width: 90%;
+}
+
+.image .avatar {
+  width: 90%;
+  margin: 2rem auto;
+  display: block;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 85px;
+  height: 45px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  background: #fff;
+  border-radius: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  background-image: url(images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: var(--text-blue);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.role {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.role .name {
+  font-weight: 500;
+}
+
+.role .job {
+  color: var(--grayish-blue);
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  padding: 3rem;
+}
+.attribution a {
+  color: var(--text-blue);
+}
+
+@media only screen and (min-width: 1000px) {
+  .section {
+    display: flex;
+    align-items: center;
+  }
+
+  .description {
+    z-index: 100;
+    width: 60%;
+    font-size: 32px;
+  }
+
+  .image-container {
+    position: absolute;
+    right: 10%;
+  }
+
+  .image .avatar {
+    width: auto;
+  }
+}
